@@ -1,0 +1,132 @@
+.cardFront{
+    position: relative;
+    transform: rotateY(0deg);
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+.cardBack{
+    transform: rotateY(180deg);
+    width: 220px;
+    height: 320px;
+    background-color: white;
+    padding: 15px 20px 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px 3px gainsboro;
+}
+.filmCard{
+    position: relative;
+    width: 220px;
+    height: 320px;
+
+}
+.cardFront,
+.cardBack {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: all 1.3s ease;
+    position: absolute;
+    cursor: pointer;
+
+}
+.cardImg{
+    object-fit: contain;
+    width: 100%;
+}
+.filmFormat{
+    position: absolute;
+    width: 32px;
+    top: 10px;
+    left: 10px;
+    border-radius: 15%;
+    height: 32px;
+    background-color: aliceblue;
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    line-height: 32px;
+}
+.filmAge{
+    position: absolute;
+    width: 32px;
+    top: 50px;
+    left: 10px;
+    border-radius: 15%;
+    height: 32px;
+    background-color: aliceblue;
+    font-size: 11px;
+    text-align: center;
+    color: #000;
+    line-height: 32px;
+}
+.filmTechs{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #252525;
+    padding-top: 9px;
+}
+.filmCard:hover > .cardFront{
+    transition: 1.3s;
+    transform-style: flat;
+    transform: rotateY(180deg);
+}
+.filmCard:hover > .cardBack{
+    transition: 1.3s;
+    transform-style: flat;
+    transform: rotateY(0);
+}
+
+.cardName{
+    font-size: 13px;
+    text-align: center;
+    color: #42b2e7;
+    font-weight: bold;
+    font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
+}
+
+.filmRating{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.cardRating{
+    margin-right: 10px;
+}
+
+.filmRatingTo{
+    font-weight: bold;
+    font-size: 18px;
+}
+.filmRatingFrom{
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.genre, .director{
+    color: #b6b6b6;
+    font-size: 10px;
+    text-transform: lowercase;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.filmGenre, .filmDirector{
+    color: #000;
+    font-size: 12px;
+    height: 28px;
+    line-height: 14px;
+    overflow: hidden
+}
+
+.rental{
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 25px;
+    color: #42b2e7;
+}
