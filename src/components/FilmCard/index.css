@@ -27,7 +27,7 @@
     height: 100%;
     overflow: hidden;
     backface-visibility: hidden;
-    transition: all 1.3s ease;
+    transition: all 1s ease;
     position: absolute;
     cursor: pointer;
 
@@ -70,12 +70,12 @@
     padding-top: 9px;
 }
 .filmCard:hover > .cardFront{
-    transition: 1.3s;
+    transition: 1s;
     transform-style: flat;
     transform: rotateY(180deg);
 }
 .filmCard:hover > .cardBack{
-    transition: 1.3s;
+    transition: 1s;
     transform-style: flat;
     transform: rotateY(0);
 }
