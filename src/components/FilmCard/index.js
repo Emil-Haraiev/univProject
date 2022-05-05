@@ -1,35 +1,36 @@
 import React from "react";
-import DoctorStrange from '../../assets/Doctor-Strange.jpg';
 import imdb from '../../assets/imdb.png';
 import './index.css';
 
 
-const FilmCard = () => {
+const FilmCard = (props) => {
+
+    const {item} = props;
     return(
          <div className='card'>
              <div className='filmCard'>
                  <div className='cardFront'>
                      <a href='#'>
-                         <img className='cardImg' src={DoctorStrange} alt='Doctor-Strange'/>
+                         <img className='cardImg' src={item.img} alt={item.name}/>
                      </a>
-                     <div className='filmFormat'>2D</div>
-                     <div className='filmAge'>16+</div>
+                     <div className='filmFormat'>{item.format}</div>
+                     <div className='filmAge'>{item.age}</div>
                  </div>
                  <div className='cardBack'>
-                     <div className='cardName'>Доктор Стрендж у мультивсесвіті божевілля</div>
+                     <div className='cardName'>{item.name}</div>
                      <div className='filmRating'>
                          <img className='cardRating' src={imdb} alt='imdb'/>
-                         <div className='filmRatingTo'>4.4</div>
+                         <div className='filmRatingTo'>{item.rate}</div>
                          <div className='filmRatingFrom'>/10</div>
                      </div>
                      <div className='filmInfo'>
                          <div className='genre'>Жанр</div>
-                         <div className='filmGenre'>екшн, фантастика, Marvel, супергерой</div>
+                         <div className='filmGenre'>{item.genre}</div>
                          <div className='director'>Режисер</div>
-                         <div className='filmDirector'>Сем Реймі</div>
+                         <div className='filmDirector'>{item.director}</div>
                      </div>
-                     <div className='rental'>З 05 травня 2022</div>
-                     <div className='filmTechs'>Cinetech+</div>
+                     <div className='rental'>{item.date}</div>
+                     <div className='filmTechs'>{item.tech}</div>
                  </div>
              </div>
          </div>

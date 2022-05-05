@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import FilmCard from "./components/FilmCard";
+import App from "./components/App";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FilmCard />
+      <App/>
   </React.StrictMode>
 );
 
