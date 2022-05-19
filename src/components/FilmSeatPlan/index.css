@@ -1,0 +1,45 @@
+svg{
+    display: block;
+    width: 528px;
+    margin: 0 auto;
+}
+
+.screen{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 70px;
+}
+
+.seatingPlace{
+    cursor: pointer;
+    width: 15px;
+    height: 25px;
+    background-color: deepskyblue;
+    border-radius: 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.seatingPlaceVip{
+    cursor: pointer;
+    width: 15px;
+    height: 25px;
+    background-color: #ff4143;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.seats{
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: 0 auto;
+
+}
+
+.VipSeats{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}

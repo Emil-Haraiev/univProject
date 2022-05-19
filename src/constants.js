@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from 'uuid';
+
+
 import berkut from './assets/berkut.jpg';
 import dambldor from './assets/dambldor.jpg';
 import moribus from './assets/moribus.jpg';
@@ -26,6 +29,12 @@ const cards = [
         genre: 'екшн, бойовик, драма, кримінал, DC', director: 'Метт Рівз', date: 'з 12 травня 2022',tech: 'Cinetech+ | IMAX | 4DX | RE`LUX'}
 
 ]
+
+const month = ['Січень','Лютий','Березень','Квітень','Травень',
+    'Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'];
+const days = ['1','2','3','4','5','6','7','8','9','10',
+    '11','12','13','14','15','16','17','18','19','20',
+    '21','22','23','24','25','26','27','28','29','30','31'];
 
 
 export default cards;

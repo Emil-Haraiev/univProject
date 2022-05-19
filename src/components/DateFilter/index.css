@@ -1,0 +1,23 @@
+.DateFilterWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    width: 1022px;
+}
+
+
+
+button{
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 4px;
+    padding: 12px 0;
+    background-color: white;
+    width: 142px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 4px;
+}
+
+.active{
+    background-color: #42b2e7;
+}
