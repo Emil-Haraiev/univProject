@@ -3,23 +3,37 @@ import './index.css';
 
 
 const TechFilter = () => {
-    // const buttonsData = [
-    //     {name:'cinet', label: 'CINETECH+'},
-    //     {name:'lux', label: 'RE`LUX'},
-    //     {name:'dx', label: '4DX'},
-    //     {name:'imax', label: 'IMAX'}
-    // ]
+    const buttonsData = [
+        {name:'cinet', label: 'CINETECH+'},
+        {name:'lux', label: 'RE`LUX'},
+        {name:'dx', label: '4DX'},
+        {name:'imax', label: 'IMAX'}
+    ]
 
 
-    return(
-        <div className='allButtons'>
-            <div>Техологія:</div>
-            <button>Cinetech+</button>
-            <button>RE`LUX</button>
-            <button>4DX</button>
-            <button>IMAX</button>
+
+    const buttons = buttonsData.map(({name, label}) => {
+        // const active = props.filter === name;
+        // const clazz = active ? 'btn-light' : 'btn-outline-light';
+        return (
+            <button type="button"
+                    // className={`btn ${clazz}`}
+                    key={name}
+                    // onClick={() => props.onFilterSelect(name)}
+            >
+                {label}
+            </button>
+        )
+    })
+
+    return (
+        <div className='filterWrapper'>
+            <div>Технологія:</div>
+            <div className="btn-group">
+                {buttons}
+            </div>
         </div>
-    )
+   )
 
 }
 

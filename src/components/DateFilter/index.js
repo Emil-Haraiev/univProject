@@ -1,6 +1,7 @@
 import React from "react";
 import './index.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {Navigation,Pagination, Scrollbar,A11y} from "swiper";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,14 +14,12 @@ const DateFilter = () =>{
 
        <Swiper
            className='DateFilterWrapper'
-           // modules={[Navigation, Pagination, Scrollbar, A11y]}
+           modules={[Navigation, Pagination, Scrollbar, A11y]}
            spaceBetween={50}
            slidesPerView={7}
            navigation
-           pagination={{ clickable: true }}
-           scrollbar={{ draggable: true }}
-           onSwiper={(swiper) => console.log(swiper)}
-           onSlideChange={() => console.log('slide change')}
+           // onSwiper={(swiper) => console.log(swiper)}
+           // onSlideChange={() => console.log('slide change')}
 
        >
                <SwiperSlide >
