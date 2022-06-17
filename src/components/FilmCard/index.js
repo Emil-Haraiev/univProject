@@ -6,6 +6,7 @@ import './index.css';
 const FilmCard = (props) => {
 
     const {item} = props;
+    console.log(item)
     return(
          <div className='card'>
              <div className='filmCard'>

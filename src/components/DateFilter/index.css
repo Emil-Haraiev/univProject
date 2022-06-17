@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
-    width: 1022px;
+    width: 700px;
 }
 
 
@@ -10,7 +10,7 @@
 button{
     border: 1px solid rgba(255,255,255,.1);
     border-radius: 4px;
-    padding: 12px 0;
+    padding: 20px 0;
     background-color: white;
     width: 142px;
     text-align: center;
@@ -19,5 +19,5 @@ button{
 }
 
 .active{
-    background-color: #42b2e7;
+    background-color: #a1ec7c;
 }

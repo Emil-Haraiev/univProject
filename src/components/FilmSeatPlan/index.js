@@ -42,3 +42,5 @@ const FilmSeatPlan = () => {
 
 
 export default FilmSeatPlan;
+
+
