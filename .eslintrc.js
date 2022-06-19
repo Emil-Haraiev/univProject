@@ -25,6 +25,7 @@ module.exports = {
         "array-callback-return": "off",
         "consistent-return": "off",
         "max-len": "off",
-        "import/no-unresolved": "off"
+        "import/no-unresolved": "off",
+        "no-unused-vars": "off"
     }
 }

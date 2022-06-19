@@ -11,7 +11,6 @@ const Films = (props) => {
                 if(activeDay === date){
                         return(
                             films.map((item, index) => {
-
                                 return (
                                     <FilmCard key={index} item={item}/>
                                 )

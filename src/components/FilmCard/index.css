@@ -96,16 +96,19 @@
 
 .cardRating{
     margin-right: 10px;
+
 }
 
 .filmRatingTo{
     font-weight: bold;
     font-size: 18px;
+    color: black;
 }
 .filmRatingFrom{
     font-weight: bold;
     margin-top: 5px;
     font-size: 12px;
+    color: black;
 }
 
 .genre, .director{
