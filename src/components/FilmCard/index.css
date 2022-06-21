@@ -92,6 +92,7 @@
     display: flex;
     margin-top: 40px;
     margin-bottom: 40px;
+    color: black;
 }
 
 .cardRating{
@@ -102,13 +103,13 @@
 .filmRatingTo{
     font-weight: bold;
     font-size: 18px;
-    color: black;
+    text-decoration: none;
 }
 .filmRatingFrom{
     font-weight: bold;
     margin-top: 5px;
     font-size: 12px;
-    color: black;
+
 }
 
 .genre, .director{

@@ -1,10 +1,15 @@
 import Films from "../Films";
+import {useNavigate} from "react-router-dom";
 import DateFilter from "../DateFilter";
 import {cards, month} from "../../constants";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
 
 const MainPage = () => {
+    const navigate = useNavigate();
+    function handleClick() {
+        navigate(`/film`)
+    }
     const [activeDay, setActiveDay] = useState(new Date().getDate())
 
     const days = []
@@ -23,7 +28,7 @@ const MainPage = () => {
     return(
         <>
             <DateFilter days={days} handleDateChange={handleDateChange} activeDay={activeDay}/>
-            <Films films = {cards} activeDay={activeDay}/>
+            <Films films = {cards} activeDay={activeDay} onClick={handleClick}/>
         </>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import FilmCard from "../FilmCard";
 import './index.css';
+import {Link} from "react-router-dom";
 
 
 const Films = (props) => {
@@ -12,7 +13,8 @@ const Films = (props) => {
                         return(
                             films.map((item, index) => {
                                 return (
-                                    <FilmCard key={index} item={item}/>
+                                        <FilmCard key={index} item={item}/>
+
                                 )
                             })
                         )

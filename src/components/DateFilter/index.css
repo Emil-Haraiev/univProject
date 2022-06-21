@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
-    width: 700px;
+    width: 630px;
 }
 
 
@@ -22,7 +22,3 @@ button{
     color: white;
 }
 
-.swiper-button-prev{
-    display: block;
-    right: 100px;
-}

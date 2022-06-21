@@ -63,7 +63,9 @@ const cards = [
             { img:paliyka, format: '2D', age: '16+', name: 'Палійка ', rate: 5.1,
                 genre: 'містика, трилер', director: 'Кіт Томас', date: ' Вже у прокаті!',tech: 'Cinetech+ | 4DX'},
             { img:doctor, format: '2D', age: '12+', name: 'Доктор Стрендж у мультивсесвіті божевілля', rate: 7.9,
-                genre: 'екшн, фантастика, Marvel, супергерой', director: 'Сем Реймі', date: 'Вже у прокаті!',tech: 'Cinetech+ | 4DX | IMAX'}
+                genre: 'екшн, фантастика, Marvel, супергерой', director: 'Сем Реймі', date: 'Вже у прокаті!',tech: 'Cinetech+ | 4DX | IMAX'},
+            { img:moribus, format: '2D', age: '12+', name: 'Морбіус', rate: 5.1,
+                genre: 'фантастика, трилер, пригоди, екшн, супергерой, Marvel', director: 'Даніель Еспіноса', date: 'Вже у прокаті!',tech: 'Cinetech+ | RE`LUX'}
 
         ]
     },
@@ -133,7 +135,9 @@ const cards = [
             {img:berkut, format: '2D', age: '12+', name: 'Захар Беркут', rate: 5.7, genre: 'драма, історія, бойовик, українське', director: 'Ахтем Сеітаблаєв, Джон Вінн', date: 'Вже у прокаті!', tech: 'Cinetech+'},
             {img:dambldor, format: '2D', age: '3D', name: 'Фантастичні звірі: Таємниці Дамблдора ', rate: 6.5, genre: 'пригоди, фентезі, сімейний', director: 'Девід Єйтс', date: 'Вже у прокаті!', tech: 'RE`LUX'},
             { img:doctor, format: '2D', age: '12+', name: 'Доктор Стрендж у мультивсесвіті божевілля', rate: 7.9,
-                genre: 'екшн, фантастика, Marvel, супергерой', director: 'Сем Реймі', date: 'Вже у прокаті!',tech: 'Cinetech+ | 4DX | IMAX'}
+                genre: 'екшн, фантастика, Marvel, супергерой', director: 'Сем Реймі', date: 'Вже у прокаті!',tech: 'Cinetech+ | 4DX | IMAX'},
+            { img:paliyka, format: '2D', age: '16+', name: 'Палійка ', rate: 5.1,
+                genre: 'містика, трилер', director: 'Кіт Томас', date: ' Вже у прокаті!',tech: 'Cinetech+ | 4DX'}
 
         ]
     }

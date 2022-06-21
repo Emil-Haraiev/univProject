@@ -1,20 +1,19 @@
 import React from "react";
 import imdb from '../../assets/imdb.png';
 import './index.css';
-//import {useNavigation} from 'react-router-dom';
+import {Link} from "react-router-dom";
+import {useNavigate} from 'react-router-dom';
 
 const FilmCard = (props) => {
-    let navigate = useNavigation();
+    const navigate = useNavigate();
     const {item} = props;
 
     return(
-
-         <div className='card' >
+        // <Link to='/film'>
+            <div className='card' onClick={() => navigate(`/film/${item.name}`, {state: item})}>
                 <div className='filmCard'>
                     <div className='cardFront'>
-                        <a to ='/film'>
-                            <img className='cardImg' src={item.img} alt={item.name}/>
-                        </a>
+                        <img className='cardImg' src={item.img} alt={item.name}/>
                         <div className='filmFormat'>{item.format}</div>
                         <div className='filmAge'>{item.age}</div>
                     </div>
@@ -35,7 +34,9 @@ const FilmCard = (props) => {
                         <div className='filmTechs'>{item.tech}</div>
                     </div>
                 </div>
-         </div>
+            </div>
+        // </Link>
+
 
     )
 }
