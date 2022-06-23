@@ -13,7 +13,7 @@ const Films = (props) => {
                         return(
                             films.map((item, index) => {
                                 return (
-                                        <FilmCard key={index} item={item}/>
+                                        <FilmCard activeDay = {activeDay}key={index} item={item}/>
 
                                 )
                             })

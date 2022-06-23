@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 
 const FilmCard = (props) => {
     const navigate = useNavigate();
-    const {item} = props;
+    const {item, activeDay} = props;
 
     return(
         // <Link to='/film'>

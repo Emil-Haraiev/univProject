@@ -14,7 +14,10 @@ svg{
 .seatingPlace{
     cursor: pointer;
     width: 15px;
+    text-align: center;
     height: 25px;
+    /*text-align: center;*/
+    font-size: 11px;
     background-color: deepskyblue;
     border-radius: 15px;
     margin-right: 10px;

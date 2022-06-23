@@ -9,13 +9,8 @@ import arrow from '../../assets/arrow-left.svg'
 import {useLocation, Link} from "react-router-dom";
 const FilmReservInfo = () => {
     const {state} = useLocation()
-
     return(
        <>
-           {/*<div className='arrowBack'>*/}
-           {/*    <img className='arrowBackImg' src={arrow}/>*/}
-           {/*    <Link className='arrowBackTitle' to='/'>Головна сторінка</Link>*/}
-           {/*</div>*/}
            <Link to='/' className='arrowBack'>
                <img className='arrowBackImg' src={arrow}/>
            </Link>
@@ -25,7 +20,7 @@ const FilmReservInfo = () => {
                    <div className = 'filmName'>{state.name}</div>
                    <div className='filmDate'>
                        <img src={calendar} alt='calendar'/>
-                       <div className ='filmDateInfo'> 25 червня 2022</div>
+                       <div className ='filmDateInfo'> { }2022</div>
                    </div>
                    <div className='filmDate' >
                        <img src={location} alt='location'/>
