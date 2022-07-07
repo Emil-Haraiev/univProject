@@ -1,27 +1,17 @@
 import React, {useMemo} from "react";
-import {useState} from "react";
 import './index.css'
 import {vipSeating} from '../../constants';
-import {seating} from '../../constants';
 
-const FilmSeatPlan = () => {
-    const [selectedItem, setSelectedItem] = useState([]);
-    const [tempSeating, setTempSeating] = useState(seating)
+const FilmSeatPlan = ({tempSeating,handleSelect}) => {
 
-    const handleSelect = (seat) => {
-        setSelectedItem(prevState => [...prevState, seat])
-        const newSeatings = tempSeating.map(item =>  item.id === seat.id ? {...item, free: !item.free} : {...item, free: item.free})
-        setTempSeating(newSeatings)
 
-    }
-    console.log(selectedItem)
     const seats = useMemo(()=> tempSeating.map((seat, i) => {
-        const isFree = seat.free;
-        const styles = {pointerEvents: !isFree ? 'none' : 'auto', backgroundColor: !isFree ? 'gray' : 'deepskyblue'}
+        const isFree = seat.reserved;
+        const styles = {
+            background: isFree ? 'purple' : 'deepskyblue ',
+        }
         return(
-            <div className='seatingPlace' key={i} onClick={() => handleSelect(seat)}
-                 style={styles}>{selectedItem.place}</div>
-
+            <div className='seatingPlace' key={i} onClick={() => handleSelect(seat)} style={styles}></div>
         )
     }),[tempSeating ])
 
@@ -30,6 +20,7 @@ const FilmSeatPlan = () => {
             <div className='seatingPlaceVip' key={i}>{seat}</div>
         )
     })
+
     return(
         <div className='FilmSeatPlanWrapper'>
 

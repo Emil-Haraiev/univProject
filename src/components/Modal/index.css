@@ -1,0 +1,82 @@
+.modal{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.modal.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.modalContent{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    height: 200px;
+    width: 400px;
+    transform: scale(0.5);
+    transition:  0.4s all;
+}
+
+.modalContent.active{
+    transform: scale(1);
+
+}
+
+.ukraine{
+    position: fixed ;
+    left: -40px;
+    bottom: 10px;
+    width: 150px;
+    height: 42px;
+    transform: rotate(45deg);
+    z-index: 999;
+    background: linear-gradient(-180deg, rgb(0, 91, 187) 50%, rgb(255, 213, 0) 50%);
+}
+.ukraineFlag{
+    width: 30px;
+    margin-right: 5px;
+}
+.marqueeWrap{
+    display: flex;
+    margin-top: 45px;
+}
+.close{
+    cursor: pointer;
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: 383px;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition:         transform 0.3s ease-in-out;
+}
+
+.close:hover{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.modalTittle{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.modalText{
+    text-align: center;
+}
+.modalEnd{
+    text-align: center;
+    margin-top: 13px;
+}
+.modalSpan{
+    font-weight: bold;
+    font-size: 20px;
+}

@@ -32,6 +32,18 @@
     background-color: #42b2e7;
     color: white;
 }
+.ukraine{
+    display: flex;
+    margin-top: 20px;
+}
+.ukraineImg{
+    width: 25px;
+    margin-right: 10px;
+}
+.support{
+    font-weight: bold;
+    color: blue;
+}
 
 .filmSession{
     margin-top: 10px;

@@ -3,6 +3,7 @@ import {useNavigate} from "react-router-dom";
 import DateFilter from "../DateFilter";
 import {cards, month} from "../../constants";
 import React, {useEffect, useState} from "react";
+import Modal from "../Modal";
 
 
 const MainPage = () => {
@@ -29,6 +30,7 @@ const MainPage = () => {
         <>
             <DateFilter days={days} handleDateChange={handleDateChange} activeDay={activeDay}/>
             <Films films = {cards} activeDay={activeDay} onClick={handleClick}/>
+
         </>
     )
 }

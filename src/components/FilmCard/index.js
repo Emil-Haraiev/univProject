@@ -9,7 +9,6 @@ const FilmCard = (props) => {
     const {item, activeDay} = props;
 
     return(
-        // <Link to='/film'>
             <div className='card' onClick={() => navigate(`/film/${item.name}`, {state: item})}>
                 <div className='filmCard'>
                     <div className='cardFront'>
@@ -35,9 +34,6 @@ const FilmCard = (props) => {
                     </div>
                 </div>
             </div>
-        // </Link>
-
-
     )
 }
 

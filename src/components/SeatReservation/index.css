@@ -65,3 +65,29 @@ span{
 .closeImg{
     border: none;
 }
+
+.wrap{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.closeImg {
+    display: block;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 10px;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition:         transform 0.3s ease-in-out;
+
+}
+
+.closeImg:hover{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+ }
+
+
+.seatReservationWrapper{
+    margin-top: 40px;
+    margin-left: 18px;
+}
