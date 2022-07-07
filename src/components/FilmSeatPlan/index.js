@@ -2,16 +2,22 @@ import React, {useMemo} from "react";
 import './index.css'
 import {vipSeating} from '../../constants';
 
-const FilmSeatPlan = ({tempSeating,handleSelect}) => {
-
+const FilmSeatPlan = ({tempSeating,handleSelect, selectedItems}) => {
 
     const seats = useMemo(()=> tempSeating.map((seat, i) => {
-        const isFree = seat.reserved;
-        const styles = {
-            background: isFree ? 'purple' : 'deepskyblue ',
-        }
+       const isFree = seat.reserved;
+       const style = {
+           backgroundColor: isFree ? 'purple' : 'deepskyblue'
+       }
+       if(localStorage.getItem('tickets')){
+           const busyStyle = {
+               backgroundColor: 'gray',
+               pointerEvents: 'auto'
+           }
+       }
         return(
-            <div className='seatingPlace' key={i} onClick={() => handleSelect(seat)} style={styles}></div>
+            <div className='seatingPlace' key={i} onClick={() => handleSelect(seat)}
+             style={style}></div>
         )
     }),[tempSeating ])
 
@@ -20,7 +26,6 @@ const FilmSeatPlan = ({tempSeating,handleSelect}) => {
             <div className='seatingPlaceVip' key={i}>{seat}</div>
         )
     })
-
     return(
         <div className='FilmSeatPlanWrapper'>
 

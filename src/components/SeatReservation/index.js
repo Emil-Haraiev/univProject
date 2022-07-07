@@ -1,22 +1,20 @@
 import React, {useMemo, useState} from "react";
 import './index.css'
 import close from '../../assets/close.svg'
+import {useEffect} from "react";
 
 
-const SeatReservation = ({selectedItems,setModalActive, setBooking,setSelectedItems}) => {
-
+const SeatReservation = ({selectedItems,handleBooking,setSelectedItems}) => {
     const styles = {
         display: !selectedItems.length  ? 'none' : ''
 
     }
-    const handleBooking = () => {
-        let tickets = JSON.parse(localStorage.getItem('tickets'));
-        localStorage.setItem('tickets', JSON.stringify(tickets));
-        setModalActive(true)
-        setSelectedItems([])
-    }
+
+
     const removeTicket = (seat) => {
-        setSelectedItems(selectedItems.filter(item => item.id !== seat.id))
+        setSelectedItems(
+            selectedItems.filter(item => item.id !== seat.id)
+        )
 
     }
     const info = selectedItems.map((item, i)=> {

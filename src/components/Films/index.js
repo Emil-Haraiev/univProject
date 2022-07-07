@@ -15,7 +15,7 @@ const Films = (props) => {
                         return(
                             films.map((item, index) => {
                                 return (
-                                    <FilmCard activeDay = {activeDay}key={index} item={item}/>
+                                    <FilmCard activeDay = {activeDay} date={date} key={index} item={item}/>
 
                                 )
                             })

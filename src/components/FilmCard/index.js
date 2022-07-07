@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 
 const FilmCard = (props) => {
     const navigate = useNavigate();
-    const {item, activeDay} = props;
+    const {item} = props;
 
     return(
             <div className='card' onClick={() => navigate(`/film/${item.name}`, {state: item})}>

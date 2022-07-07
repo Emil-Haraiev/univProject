@@ -21,7 +21,7 @@ const FilmReservInfo = () => {
                    <div className = 'filmName'>{state.name}</div>
                    <div className='filmDate'>
                        <img src={calendar} alt='calendar'/>
-                       <div className ='filmDateInfo'> 27 червня 2022</div>
+                       <div className ='filmDateInfo'> {} 2022</div>
                    </div>
                    <div className='filmDate' >
                        <img src={location} alt='location'/>

@@ -14,14 +14,34 @@ const Film = () =>{
     const [tempSeating, setTempSeating] = useState(seating)
     const [modalActive, setModalActive] = useState(false)
 
-    const [booking, setBooking] = useState([])
 
     useEffect(()=>{
-            localStorage.setItem('tickets', JSON.stringify(booking))
-            const tickets = JSON.parse(localStorage.getItem('tickets'))
-            setBooking(tickets)
+        const tickets = localStorage.getItem('tickets')
 
+        if(!tickets){
+            localStorage.setItem('tickets', JSON.stringify([]))
+        }else{
+            const savedTickets = JSON.parse(localStorage.getItem('tickets'))
+            setSelectedItems(savedTickets)
+
+        }
     },[])
+
+    const handleBooking = () => {
+        const busy = selectedItems.map(item => {
+            return{
+                ...item,
+                busy: true
+            }
+        })
+        const tickets = JSON.parse(localStorage.getItem('tickets'));
+        const a = [...busy,...tickets ];
+        localStorage.setItem('tickets', JSON.stringify(a))
+        setModalActive(true)
+        setSelectedItems([])
+    }
+
+
     function placePerRow (row, place){
       for(let i = 1; i <= row; i++){
           for(let j = 1; j <= place; j++){
@@ -49,11 +69,9 @@ const Film = () =>{
         <>
             <div className='filmWrapper'>
                 <FilmReservInfo />
-                <FilmSeatPlan seating = {seating}  placePerRow = {placePerRow(7, 14)} handleSelect={handleSelect} tempSeating={tempSeating}/>
+                <FilmSeatPlan  selectedItems={selectedItems} seating = {seating}  placePerRow = {placePerRow(7, 14)} handleSelect={handleSelect} tempSeating={tempSeating}/>
             </div>
-            <SeatReservation selectedItems={selectedItems}
-                             setBooking = {setBooking}
-                             tempSeating ={tempSeating}  setModalActive= {setModalActive} setSelectedItems = {setSelectedItems}/>
+            <SeatReservation selectedItems={selectedItems} tempSeating ={tempSeating} handleBooking={handleBooking}  setModalActive= {setModalActive} setSelectedItems = {setSelectedItems}/>
             <Modal active={modalActive} setActive={setModalActive}/>
         </>
     )
